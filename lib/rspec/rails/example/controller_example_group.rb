@@ -88,6 +88,12 @@ module RSpec::Rails
       include Webrat::Matchers
     end
     
+    capybara do
+      include Capybara::Node::Finders
+      include Capybara::Node::Actions
+      include Capybara::Node::Matchers
+    end
+    
     # TODO (DC 7/31/2010) this is already included in RailsExampleGroup, but
     # due to some load order dependency problem between Webrat::Matchers and
     # RSpec::Matchers, combined with the fact that RailsExampleGroup extends

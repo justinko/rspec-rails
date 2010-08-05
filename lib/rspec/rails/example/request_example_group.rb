@@ -26,6 +26,12 @@ module RSpec::Rails
       include Webrat::Methods
     end
     
+    capybara do
+      include Capybara::Node::Finders
+      include Capybara::Node::Actions
+      include Capybara::Node::Matchers
+    end
+    
     include RSpec::Rails::Matchers::RedirectTo
     include RSpec::Rails::Matchers::RenderTemplate
     include ActionController::TemplateAssertions
