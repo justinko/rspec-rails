@@ -7,8 +7,12 @@ if defined?(ActionMailer)
       include RSpec::Rails::RailsExampleGroup
 
       include ActionMailer::TestCase::Behavior
-      include Webrat::Matchers
-
+      include RSpec::Rails::BrowserSimulators
+      
+      webrat do
+        include Webrat::Matchers
+      end
+      
       included do
         metadata[:type] = :mailer
         include ::Rails.application.routes.url_helpers

@@ -81,10 +81,13 @@ module RSpec::Rails
     include RSpec::Rails::Matchers::RedirectTo
     include RSpec::Rails::Matchers::RenderTemplate
     include RSpec::Rails::Matchers::RoutingMatchers
-
-    include Webrat::Methods
-    include Webrat::Matchers
-
+    include RSpec::Rails::BrowserSimulators
+    
+    webrat do
+      include Webrat::Methods
+      include Webrat::Matchers
+    end
+    
     # TODO (DC 7/31/2010) this is already included in RailsExampleGroup, but
     # due to some load order dependency problem between Webrat::Matchers and
     # RSpec::Matchers, combined with the fact that RailsExampleGroup extends
