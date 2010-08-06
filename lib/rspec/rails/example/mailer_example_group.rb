@@ -14,7 +14,7 @@ if defined?(ActionMailer)
       end
       
       capybara do
-        include Capybara::Node::Matchers
+        include Capybara
       end
       
       included do

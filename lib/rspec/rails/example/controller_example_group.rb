@@ -82,16 +82,14 @@ module RSpec::Rails
     include RSpec::Rails::Matchers::RenderTemplate
     include RSpec::Rails::Matchers::RoutingMatchers
     include RSpec::Rails::BrowserSimulators
-    
+
     webrat do
       include Webrat::Methods
       include Webrat::Matchers
     end
     
     capybara do
-      include Capybara::Node::Finders
-      include Capybara::Node::Actions
-      include Capybara::Node::Matchers
+      include Capybara
     end
     
     # TODO (DC 7/31/2010) this is already included in RailsExampleGroup, but

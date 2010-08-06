@@ -27,9 +27,7 @@ module RSpec::Rails
     end
     
     capybara do
-      include Capybara::Node::Finders
-      include Capybara::Node::Actions
-      include Capybara::Node::Matchers
+      include Capybara
     end
     
     include RSpec::Rails::Matchers::RedirectTo

@@ -40,7 +40,7 @@ module RSpec::Rails
     end
     
     capybara do
-      include Capybara::Node::Matchers
+      include Capybara
     end
     
     module ClassMethods
