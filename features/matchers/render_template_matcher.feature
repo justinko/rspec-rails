@@ -12,8 +12,6 @@ Feature: render_template matcher
       require "spec_helper"
       
       describe GadgetsController do
-        render_views
-        
         describe "#index" do
           subject { get :index }
           
