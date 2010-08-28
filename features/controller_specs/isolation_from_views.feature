@@ -1,6 +1,6 @@
 Feature: do not render views
 
-  By default, controller specs do not render views. This allows you specify
+  By default, controller specs do not render views. This allows you to specify
   which view template an action should try to render regardless of whether or
   not the template compiles cleanly.
 
